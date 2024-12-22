@@ -1,4 +1,6 @@
+import 'package:english_ap/pages/landing_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
@@ -26,14 +28,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Trần Quang Huy '),
-        backgroundColor: Colors.lightBlue,
-      ),
-      body: const Center(
-        child: Text('Welcome to Flutter!'),
-      ),
+      body: LandingPage(),
     );
   }
 }
