@@ -1,8 +1,15 @@
+// ignore: unused_import
+import 'package:english_ap/packages/quote/qoute_model.dart';
+import 'package:english_ap/packages/quote/quote.dart';
 import 'package:english_ap/pages/landing_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Quotes().getAll();
+
   runApp(const MyApp());
 }
 

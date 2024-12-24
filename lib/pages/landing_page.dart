@@ -60,7 +60,7 @@ class LandingPage extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 80),
               child: RawMaterialButton(
                 onPressed: () {
-                  ////    chuyển hướng người dùng và  quay lại  đc
+                  ////    chuyển hướng người dùng và  quay lại
                   //Navigator.push(
                   //    context, MaterialPageRoute(builder: (context) => Home()));
 
